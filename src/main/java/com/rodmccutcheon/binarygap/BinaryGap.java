@@ -5,7 +5,7 @@ package com.rodmccutcheon.binarygap;
  */
 public class BinaryGap {
 
-    public static void main(String[] args) {
-        System.out.println("Hello BinaryGap!");
+    public int solution(int N) {
+        return 0;
     }
 }

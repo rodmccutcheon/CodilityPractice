@@ -40,4 +40,10 @@ public class BinaryGapTest {
         int N = 1041; // 10000010001
         assertEquals(5, binaryGap.solution(N));
     }
+
+    @Test
+    public void testNonEndedGap() {
+        int N = 20; // 10100
+        assertEquals(1, binaryGap.solution(N));
+    }
 }

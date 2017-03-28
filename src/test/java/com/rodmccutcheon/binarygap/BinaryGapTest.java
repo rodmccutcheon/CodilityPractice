@@ -19,7 +19,14 @@ public class BinaryGapTest {
 
     @Test
     public void testNoBinaryGap() {
-        int binaryNumber = 11;
-        assertEquals(0, binaryGap.solution(binaryNumber));
+        int N = 1; // 1
+        assertEquals(0, binaryGap.solution(N));
     }
+
+    @Test
+    public void testOneGapOfOne() {
+        int N = 5; // 101
+        assertEquals(1, binaryGap.solution(N));
+    }
+
 }

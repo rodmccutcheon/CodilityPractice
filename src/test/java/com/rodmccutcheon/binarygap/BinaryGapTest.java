@@ -34,4 +34,10 @@ public class BinaryGapTest {
         int N = 41; // 101001
         assertEquals(2, binaryGap.solution(N));
     }
+
+    @Test
+    public void testExample() {
+        int N = 1041; // 10000010001
+        assertEquals(5, binaryGap.solution(N));
+    }
 }

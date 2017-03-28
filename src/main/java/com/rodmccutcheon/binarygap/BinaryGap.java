@@ -8,22 +8,22 @@ public class BinaryGap {
     public int solution(int N) {
         int longestBinaryGap = 0;
 
-        System.out.println("N: " + N);
+        // Convert int to binary string representation
         String binaryString = Integer.toBinaryString(N);
-        System.out.println("binary string: " + binaryString);
 
         int currentBinaryGap = 0;
 
         for (int i = 0; i < binaryString.length(); i++) {
-            char currentChar = binaryString.charAt(i);
-            System.out.println("current char: " + currentChar);
-            System.out.println("compare to zero: " + Character.compare(currentChar, '0'));
-            if (Character.compare(currentChar, '0') == 0) {
+            // If a 0 is encountered increment the current binary gap by 1
+            if (Character.compare(binaryString.charAt(i), '0') == 0) {
                 currentBinaryGap++;
             } else {
+                // Else if a 1 is encountered the binary gap has ended
+                // Check if the current binary gap is the longest binary gap
                 if (currentBinaryGap > longestBinaryGap) {
                     longestBinaryGap = currentBinaryGap;
                 }
+                // Restart the current binary gap
                 currentBinaryGap = 0;
             }
         }

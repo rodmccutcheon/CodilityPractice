@@ -1,7 +1,6 @@
 package com.rodmccutcheon.lesson2arrays;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 /**
  * Created by rodmccutcheon on 30/3/17.
@@ -9,17 +8,28 @@ import java.util.List;
 public class OddOccurrencesInArray {
 
     public int solution(int[] A) {
-        List<Integer> unmatchedIntegers = new ArrayList<>();
+        Arrays.sort(A);
+
+        int occurrences = 0;
+        int previousInt = -1;
 
         for (int currentInt : A) {
-            if (unmatchedIntegers.contains(currentInt)) {
-                unmatchedIntegers.remove(Integer.valueOf(currentInt));
+            // If its the first int, or the same as the previous int, increment the number of occurrences
+            if (previousInt == -1 || currentInt == previousInt) {
+                occurrences++;
             } else {
-                unmatchedIntegers.add(currentInt);
+                // Check if there was an odd number of occurrences
+                if (occurrences % 2 == 1) {
+                    return previousInt;
+                }
+
+                occurrences = 1;
             }
+
+            previousInt = currentInt;
         }
 
-        return unmatchedIntegers.get(0);
+        return previousInt;
     }
 
 }

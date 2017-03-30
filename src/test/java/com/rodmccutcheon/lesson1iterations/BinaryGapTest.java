@@ -1,4 +1,4 @@
-package com.rodmccutcheon.binarygap;
+package com.rodmccutcheon.lesson1iterations;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;

@@ -1,4 +1,4 @@
-package com.rodmccutcheon.binarygap;
+package com.rodmccutcheon.lesson1iterations;
 
 /**
  * Created by rodmccutcheon on 28/3/17.

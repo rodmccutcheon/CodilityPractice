@@ -22,4 +22,22 @@ public class PermMissingElemTest {
         int[] A = { 2, 3, 1, 5 };
         assertEquals(4, permMissingElem.solution(A));
     }
+
+    @Test
+    public void testOneElement() {
+        int[] A = { 1 };
+        assertEquals(2, permMissingElem.solution(A));
+    }
+
+    @Test
+    public void testMissingStart() {
+        int[] A = { 2, 3, 4 };
+        assertEquals(1, permMissingElem.solution(A));
+    }
+
+    @Test
+    public void testMissingEnd() {
+        int[] A = { 1, 2, 3 };
+        assertEquals(4, permMissingElem.solution(A));
+    }
 }

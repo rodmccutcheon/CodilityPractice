@@ -18,7 +18,8 @@ public class PermMissingElem {
             }
             prevElem = currElem;
         }
-
-        return -1;
+M
+        // If missing element hasn't been found yet it must be N + 1
+        return A.length + 1;
     }
 }

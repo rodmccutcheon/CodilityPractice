@@ -1,6 +1,9 @@
 package com.rodmccutcheon.lesson3timecomplexity;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * Created by rodmccutcheon on 6/4/17.
@@ -8,23 +11,16 @@ import java.util.Arrays;
 public class TapeEquilibrium {
 
     public int solution(int[] A) {
-        int minDifference = -1;
-
         int rightSum = Arrays.stream(A).sum();
         int leftSum = 0;
-        int currElem, currDifference;
-
+        List<Integer> diffs = new ArrayList<Integer>(A.length - 1);
 
         for (int i = 0; i < A.length - 1; i++) {
-            currElem = A[i];
-            leftSum += currElem;
-            rightSum -= currElem;
-            currDifference = Math.abs(rightSum - leftSum);
-            if (minDifference == -1 || currDifference < minDifference) {
-                minDifference = currDifference;
-            }
+            leftSum += A[i];
+            rightSum -= A[i];
+            diffs.add(Math.abs(rightSum - leftSum));
         }
 
-        return minDifference;
+        return Collections.min(diffs);
     }
 }

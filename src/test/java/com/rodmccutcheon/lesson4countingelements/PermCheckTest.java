@@ -17,14 +17,20 @@ public class PermCheckTest {
     }
 
     @Test
-    void singleElementArrayNotValidPermutation() {
+    void singleElementArrayOutsideRangeNotValidPermutation() {
         int[] A = { 7 };
         assertEquals(0, new PermCheck().solution(A, A.length));
     }
 
     @Test
-    void multipleElementsNotValidPermutation() {
+    void multipleElementsOutsideRangeNotValidPermutation() {
         int [] A = { 1, 3 };
+        assertEquals(0, new PermCheck().solution(A, A.length));
+    }
+
+    @Test
+    void multipleElementsDuplicatesNotValidPermutation() {
+        int [] A = { 1, 1 };
         assertEquals(0, new PermCheck().solution(A, A.length));
     }
 }

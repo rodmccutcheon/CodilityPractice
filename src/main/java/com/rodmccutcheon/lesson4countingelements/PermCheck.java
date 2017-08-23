@@ -5,10 +5,10 @@ package com.rodmccutcheon.lesson4countingelements;
  */
 public class PermCheck {
 
-    public int solution(int[] A, int N) {
-        int[] count = new int[N];
+    public int solution(int[] A) {
+        int[] count = new int[A.length];
         for (int a : A) {
-            if (a < 1 || a > N) {
+            if (a < 1 || a > A.length) {
                 return 0;
             } else {
                 if (count[a-1] == 1) {

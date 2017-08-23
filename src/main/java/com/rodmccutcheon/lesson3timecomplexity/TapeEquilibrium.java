@@ -23,4 +23,6 @@ public class TapeEquilibrium {
 
         return Collections.min(diffs);
     }
+
+
 }

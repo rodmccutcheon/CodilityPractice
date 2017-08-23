@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+
 /**
  * Created by rodmccutcheon on 6/4/17.
  */
@@ -25,8 +26,8 @@ public class TapeEquilibriumTest {
 
     @Test
     public void testOneSplit() {
-        int[] A = { 7, 11 };
-        assertEquals(4, tapeEquilibrium.solution(A));
+        int[] array = { 7, 11 };
+        assertEquals(4, tapeEquilibrium.solution(array));
     }
 
     @Test
@@ -40,4 +41,6 @@ public class TapeEquilibriumTest {
         int[] A = { -1000, 1000 };
         assertEquals(2000, tapeEquilibrium.solution(A));
     }
+
+
 }

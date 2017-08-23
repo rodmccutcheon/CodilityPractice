@@ -6,10 +6,11 @@ package com.rodmccutcheon.lesson4countingelements;
 public class PermCheck {
 
     public int solution(int[] A, int N) {
-        if (A[0] < 1 || A[0] > N) {
-            return 0;
-        } else {
-            return 1;
+        for (int a : A) {
+            if (a < 1 || a > N) {
+                return 0;
+            }
         }
+        return 1;
     }
 }

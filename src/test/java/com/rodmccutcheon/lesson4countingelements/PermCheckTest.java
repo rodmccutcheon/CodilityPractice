@@ -11,14 +11,20 @@ import static org.junit.jupiter.api.Assertions.fail;
 public class PermCheckTest {
 
     @Test
-    void singleElementArrayPermutation() {
+    void singleElementArrayValidPermutation() {
         int[] A = { 1 };
         assertEquals(1, new PermCheck().solution(A, A.length));
     }
 
     @Test
-    void singleElementArrayNotPermutation() {
+    void singleElementArrayNotValidPermutation() {
         int[] A = { 7 };
+        assertEquals(0, new PermCheck().solution(A, A.length));
+    }
+
+    @Test
+    void multipleElementsNotValidPermutation() {
+        int [] A = { 1, 3 };
         assertEquals(0, new PermCheck().solution(A, A.length));
     }
 }

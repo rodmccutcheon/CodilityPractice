@@ -11,4 +11,10 @@ public class FrogRiverOneTest {
         int[] A = { 1 };
         assertEquals(0, new FrogRiverOne().solution(1, A));
     }
+
+    @Test
+    void twoLeavesUnsuccessfulCrossing() {
+        int[] A = { 1, 1 };
+        assertEquals(-1, new FrogRiverOne().solution(2, A));
+    }
 }

@@ -6,3 +6,6 @@
 
 # Java class files
 out/
+
+# Gradle files
+.gradle/

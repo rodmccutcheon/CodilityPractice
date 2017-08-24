@@ -2,6 +2,8 @@ package com.rodmccutcheon.lesson4countingelements;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.stream.IntStream;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 /**
@@ -50,5 +52,17 @@ public class MissingIntegerTest {
     void unorderedArrayWithDuplicatesMissingIntegerInMiddle() {
         int[] A = { 1, 3, 6, 4, 1, 2 };
         assertEquals(5, new MissingInteger().solution(A));
+    }
+
+    @Test
+    void maxMissingInteger() {
+        int[] A = IntStream.rangeClosed(1, 100000).toArray();
+        assertEquals(100001, new MissingInteger().solution(A));
+    }
+
+    @Test
+    void zero() {
+        int[] A = IntStream.rangeClosed(0, 100).toArray();
+        assertEquals(101, new MissingInteger().solution(A));
     }
 }

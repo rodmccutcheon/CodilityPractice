@@ -10,4 +10,9 @@ public class CountDivTest {
     void noneDivisible() {
         assertEquals(0, new CountDiv().solution(3, 3, 2));
     }
+
+    @Test
+    void oneDivisible() {
+        assertEquals(1, new CountDiv().solution(3, 3, 3));
+    }
 }

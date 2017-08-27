@@ -12,4 +12,9 @@ public class PassingCarsTest {
         assertEquals(0, new PassingCars().solution(A, A.length));
     }
 
+    @Test
+    void onePassingCar() {
+        int[] A = { 0, 1 };
+        assertEquals(1, new PassingCars().solution(A, A.length));
+    }
 }

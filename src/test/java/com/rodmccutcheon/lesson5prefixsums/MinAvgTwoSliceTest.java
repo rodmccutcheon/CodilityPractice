@@ -13,8 +13,14 @@ public class MinAvgTwoSliceTest {
     }
 
     @Test
-    void twoSlices() {
+    void solutionLengthTwo() {
         int[] A = { 3, 2, 2 };
         assertEquals(1, new MinAvgTwoSlice().solution(A));
+    }
+
+    @Test
+    void solutionLengthThree() {
+        int[] A = { 4, 5, 8, 4, 5, 4 };
+        assertEquals(3, new MinAvgTwoSlice().solution(A));
     }
 }

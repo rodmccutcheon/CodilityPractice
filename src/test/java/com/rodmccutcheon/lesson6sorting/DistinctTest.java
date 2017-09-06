@@ -12,9 +12,9 @@ public class DistinctTest {
         assertEquals(1, new Distinct().solution(A));
     }
 
-    /*@Test
+    @Test
     void testSortedArray() {
         int[] A = { 1, 1, 2, 3, 3, 3 };
         assertEquals(3, new Distinct().solution(A));
-    }*/
+    }
 }

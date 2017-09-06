@@ -1,16 +1,11 @@
 package com.rodmccutcheon.lesson6sorting;
 
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
 public class Distinct {
 
     public int solution(int[] A) {
-        int counter = 0;
-        int prev = 1_000_001;
-        for (int a : A) {
-            if (a != prev) {
-                counter++;
-            }
-            prev = a;
-        }
-        return counter;
+        return Arrays.stream(A).boxed().collect(Collectors.toSet()).size();
     }
 }

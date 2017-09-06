@@ -17,4 +17,10 @@ public class DistinctTest {
         int[] A = { 1, 1, 2, 3, 3, 3 };
         assertEquals(3, new Distinct().solution(A));
     }
+
+    @Test
+    void testUnsortedArray() {
+        int[] A = { 4, 2, 1, 4 };
+        assertEquals(3, new Distinct().solution(A));
+    }
 }
